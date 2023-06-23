@@ -36,6 +36,7 @@ console.log(rest)
 // console.log(hobbies)
 
 //object ke sath -> spread
+
 var newStudent={
    ...students,
    age:"30"
