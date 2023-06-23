@@ -34,5 +34,12 @@ function createdata(newdata,callbacks){
 })
 
 }
-createdata({name:"vivek", profession: "software Engineer"}.then(get))
+createdata({name:"vivek", profession: "software Engineer"}.then(getDatas))
 
+//async and await
+
+async function start(){
+
+ await createdata({name:"vivek", profession: "software Engineer"})
+}
+start()
