@@ -18,12 +18,21 @@ function getDatas(){
     document.body.innerHTML=output
 }
 
-function createdata(){
-    setTimeout(() => {
-datas.push(newdata)
+function createdata(newdata,callbacks){
+  
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+       datas.push(newdata);
+      let error = false;
+      if(!error){
+        resolve();
+      }
+      else{
+        reject("kuch error nhi hai")
+      }  
     },2000);
+})
+
 }
+createdata({name:"vivek", profession: "software Engineer"}.then(get))
 
-createdata({name:"vivek", profession: "software Engineer"})
-
-getDatas(); 
